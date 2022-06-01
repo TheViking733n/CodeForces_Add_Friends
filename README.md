@@ -25,6 +25,9 @@ pip install webdriver-manager
 ```sh
 pip install beautifulsoup4
 ```
+```sh
+pip install lxml
+```
 
 ## Usage
 First add the list of handles in the text file, "friend_list.txt" in seperate lines.
