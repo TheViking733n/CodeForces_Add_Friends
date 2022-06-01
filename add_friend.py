@@ -67,17 +67,21 @@ if __name__ == "__main__":
     # Adding friends
     new_friends = []
     for handle in handles:
-        driver.get("https://codeforces.com/profile/{}".format(handle))
-        page_source = driver.page_source
-        soup = BeautifulSoup(page_source, 'lxml')
-        h1 = soup.find("h1")
-        
-        if "Click to add to friends" in str(h1.img):
-            print("\nAdding {} to friends".format(handle))
-            star = driver.find_element(By.TAG_NAME, "h1").find_element(By.TAG_NAME, "img")
-            star.click()
-            sleep(.2)
-            new_friends.append(handle)
+        try:
+            driver.get("https://codeforces.com/profile/{}".format(handle))
+            page_source = driver.page_source
+            soup = BeautifulSoup(page_source, 'lxml')
+            h1 = soup.find("h1")
+
+            if "Click to add to friends" in str(h1.img):
+                print("\nAdding {} to friends".format(handle))
+                star = driver.find_element(By.TAG_NAME, "h1").find_element(By.TAG_NAME, "img")
+                star.click()
+                sleep(.2)
+                new_friends.append(handle)
+        except Exception as e:
+            print(f"Error occured while fetching {handle}")
+            print(e)
     
     print("\n\n\n\n")
     print(*new_friends, sep="\n")
