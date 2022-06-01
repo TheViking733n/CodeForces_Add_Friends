@@ -1,4 +1,4 @@
-# Steganography
+# CodeForces_Add_Friends
 ### _Automatically adds friends on CodeForces from a list of handles._
 A simple selenium and webscraping project I made to automate the process of adding friends to my alternate CodeForces handle. 
 
