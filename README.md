@@ -1,10 +1,10 @@
 # CodeForces_Add_Friends
 ### _Automatically adds friends on CodeForces from a list of handles._
-A simple selenium and webscraping project I made to automate the process of adding friends to my alternate CodeForces handle. 
+A simple selenium and webscraping project I made to automate the process of adding friends to my alternate CodeForces handle.
 
 ## Features
-- Easy to use 🙂
-- Fully automatic 🔥
+- Easy to Use and Fast 🙂
+- Automatically detects those handles which are already in your friends 🔥
 - Cross Platform 💻
 - No technical knowledge required to use 😎
 
@@ -30,10 +30,16 @@ pip install lxml
 ```
 
 ## Usage
-First add the list of handles in the text file, "friend_list.txt" in seperate lines.
-Install all the above dependencies. 
-After that run the python code using below command. 👍
+1. First add the list of handles in the text file, "friend_list.txt" in seperate lines.
+2. Install all the above dependencies. 
+3. Run the python code using below command. 
+  ```sh
+  python3 add_friend.py
+  ```
+5. In the browser window, login your CodeForces account.
+6. Sit back and relax. 👍
 
-```sh
-python3 add_friend.py
-```
+
+
+## How it works
+It first prompts the user to login, then it fetches all the friends of the user, so that it adds only those handles which are not already friend of user.
